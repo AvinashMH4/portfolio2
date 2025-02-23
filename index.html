@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style2.css">
+
+
+    <script src="c:\Users\avina\Desktop\avinsh02\WhatsApp Image 2025-01-24 at 7.56.03 PM.jpeg" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="c:\Users\avina\Downloads\WhatsApp Image 2024-12-26 at 8.21.11 PM.jpeg" class="logo" alt="Logo" style="margin-top: 30px; margin-left: 100px;">                 
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-business-time" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-2">
+                        <div class="header-text">
+                            <p>Data Analyst</p>
+                            <h1> Hii, I'M <span>Avinash.M.H</span><br>from Banglore,India</h1>    
+                        </div>
+                    </div>
+                        <div class="about-col-1">
+                            <div class="image1" style="margin: 100px auto;">
+                            <img src="c:\Users\avina\Desktop\avinsh02\WhatsApp Image 2025-02-17 at 12.08.39 AM.jpeg">
+                        </div>
+                        </div>
+
+                    
+                </div>
+            </div>
+       
+    <!-------------------------------About----------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+            <div class="about-col-1">
+                <img src="c:\Users\avina\Desktop\avinsh02\WhatsApp Image 2025-02-17 at 12.05.32 AM.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <p> Hi!<br>
+                    I’m Avinash M. Hosamani, passionate about data analysis and software development.<br><br>
+                    
+                    I’ve interned at Acranton Technology Pvt. Ltd., contributing to a Market Basket Analysis project using machine learning and web development.<br><br>
+                    
+                    With an MCA and BCA, I’ve worked on projects like:<br>
+                        •	AI-Based Arecanut Classification<br>
+                        •	Online PG Management System<br><br>
+                    
+                    I enjoy exploring places, meeting people, and building skills through personal projects. Let’s connect!</p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links">
+                            <a  class="btn btn2" onclick="opentab('skills')">Skills</a>
+                        
+                        
+                            <a  class="btn btn2" onclick="opentab('experience')">Experience </a>
+                        
+
+                            <a  class="btn btn2" onclick="opentab('education')">Education</a>
+                        </div>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills"></div>
+
+
+                    <!--<div class="tab-title">
+                        <p class="tab-links active-link">Skills</p>
+                        <p class="tab-links">Experience</p>
+                        <p class="tab-links">Education</p>
+                    </div>!-->
+
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li class="data-analyst"><span>Data Analyst</span></li>
+                            <li class="data-science"><span>Data Science</span></li>
+                            <li class="web-development"><span>Web Development</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li class="Acranton Technology Pvt Ltd"><span>Intern</span></li>
+                            <li class="ISCoT Enabling Engineers"><span>Programing Concept with C</span></li>
+                            <li class="ISCoT Enabling Engineers"><span>Core Python</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li class="2024"><span>MCA from VTU</span></li>
+                            <li class="2022"><span>BCA from KUD</span></li>
+                            <li class="2018"><span>PCM.CS from VCVR Pu College</span></li>
+                        </ul>
+                    </div>
+                    
+
+                   <!--<div class="tab-contents">
+                        <ul>
+                            <li><span>Data Analyst</span><br>Design Dash Bords interface/</li>
+                            <li><span>Data Science</span><br>Prediction , forecasting and Automation/</li>
+                            <li><span> web Development</span><br>Web app Development/</li>
+                        </ul>
+                    </div>-->
+
+            </div>
+        </div>
+    </div>
+<!-------------------------------Services----------------------------->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        // Loop through all tab links and remove active-link class
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+
+        // Loop through all tab contents and hide them
+        for (var tabcontent of tabcontents) {
+            tabcontent.style.display = "none";
+        }
+
+        // Add active-link class to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+
+        // Show the content of the selected tab
+        document.getElementById(tabname).style.display = "block";
+    }
+</script>
+
+
+<!--<script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getelementBYId(tabname).classlist.add("active-tab");
+    }
+</script>-->
+
+
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Offerings</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Data Analyst </h2>
+                <p>Predictive analytics uses historical data and machine learning to forecast future trends and behaviors, enabling data-driven decision-making. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Data Science</h2>
+                <p>Data science services involve collecting, processing, analyzing, build predictive models, and support data-driven decision-making. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>web Development</h2>
+                <p>It involve designing, building, maintaining,optimizing websites,web applications,front-end,back-end,full-stack development,e-commerce,web hosting.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-------------------------------portfolio----------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="c:\Users\avina\Desktop\avinsh02\myriam-jessier-eveI7MOcSmw-unsplash.jpg" alt="Analytics Work">
+                <div class="layer">
+                    <h3>Dashboards & charts</h3>
+                    <p> Dashboards and charts are visual tools that display data insights and key metrics in an interactive, easy-to-understand format for informed decision-making.</p>
+                    <a href="https://lookerstudio.google.com/s/kcWl5D3kVaw"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="c:\Users\avina\Desktop\avinsh02\markus-winkler-IrRbSND5EUc-unsplash.jpg" alt="Data Science Work">
+                <div class="layer">
+                    <h3>Technical Visualization</h3>
+                    <p> Technical visualization illustrates complex concepts using graphical representations.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="c:\Users\avina\Desktop\avinsh02\marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="Web Development Work">
+                <div class="layer">
+                    <h3>Web designing</h3>
+                    <p>Web designing involves creating visually appealing and user-friendly website layouts, focusing on aesthetics, functionality, and responsive design..</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+</div>
+<!------------------------------contact--------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <h1 class="sub-title">Contact me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>avinash.hosamni9731@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>9731271907</p>
+            <div class="social-icon">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="file:///C:/Users/avina/Desktop/Vscode/Avinash-M-Hosamani-Resume%202.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+       
+            <form action="https://api.web3forms.com/submit" method="POST" name="submit-to-google-sheet">
+
+                <input type="hidden" name="access_key" value="89553c0d-43ae-4838-87c0-94de057eda1f">
+            
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="10" cols="140" placeholder="Your Message" style="color: black;" required></textarea>
+                <button type="submit" class="btn btn2">Submit Form</button>
+            
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p style="color: black;">Thank you <i class="fa-solid fa-heart" style="color: red;"></i></p>
+</div>
+<!--<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img scr="c:\Users\avina\Desktop\Vscode\analytics.jpg">
+            </div>
+            <div class="work">
+                <img scr="c:\Users\avina\Desktop\Vscode\datasci.jpg">
+            </div>
+            <div class="work">
+                <img scr="c:\Users\avina\Desktop\Vscode\web.jpg">
+            </div>
+        </div>
+    </div>
+</div>>
+
+
+</body>
+</html>
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-<div class="tab-container">
+    <button class="tab-links" onclick="opentab('skills')">Skills</button>
+    <button class="tab-links" onclick="opentab('experience')">Experience</button>
+    <button class="tab-links" onclick="opentab('education')">Education</button>
+</div>!-->
+
+
+
+<script>
+     var sidemenu = document.getelementbyid("sidemenu");
+     function openmenu(){
+        sidemenu.style.right="0";
+     }
+     function closemenu(){
+        sidemenu.style.right = "-200px";
+     }
+</script>  
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxUIxOOpb5qCFZdNZGMx3aevqLeU6NLKoHLDZyrZ55mK5oEqETSagD0LkuaJJImcow_4w/exec>'
+    const from = document.form['submit-to-googlr-sheet']
+    const msg = document.getElementById("msg")
+
+    from.addEventListener('submit', (e) => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response, () => { "Message sent successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset()
+            msg.innerHTML
+          })
+          .catch(error => console.error('Error!',error.message))}
+        )
+    
+</script>
+    
+<script src="https://kit.fontawesome.com/e1589f054a.js" crossorigin="anonymous"></script>
+
+
+   
+
+<div id="skills" class="tab-contents">
+    <ul>
+        <li>Data Analytics</li>
+        <li>Data Science</li>
+        <li>Web Development</li>
+    </ul>
+</div>
+<div id="experience" class="tab-contents">
+    <ul>
+        <li>Acranton Technology Pvt Ltd</li>
+        <li>ISCoT Enabling Engineers</li>
+    </ul>
+</div>
+<div id="education" class="tab-contents">
+    <ul>
+        <li>MCA from VTU</li>
+        <li>BCA from KUD</li>
+        <li>PCM.CS from VCVR Pu College</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+

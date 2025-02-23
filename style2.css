@@ -1,0 +1,557 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-brhavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#head{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+/* Background settings */
+body {
+    background-image: url('c:\Users\avina\Desktop\Vscode\back2.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-color:black; /* Fallback background color */
+}
+
+/* Header styling */
+#header {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-image: url(url(c:\Users\avina\Desktop\Vscode\back2.jpg));
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f6eaea;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Highlight color */
+}
+
+/* Logo styling */
+.logo {
+    max-width: 120px; /* Adjust the logo size */
+    border-radius: 15px;
+}
+
+nav ul li a{
+    colour: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    font-family: cursive;
+    color: rgb(242, 238, 232);
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    font-family: cursive;
+    color: #e9f3e7;
+}
+.header-text h1 span{
+    color:rgb(208, 192, 192)
+    font-family: cursive;
+
+}
+
+/*--------------------------About-----------------------*/
+
+#about{
+    padding: 80px 0;
+    color:rgb(200, 186, 186);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+     float:inherit; 
+    justify-content: space-between; /* Ensures equal spacing between tabs */
+}
+
+.tab-links {
+    margin-right: 50px; /* Corrected the typo in 'margin-right' */
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+/*.tab-titals{
+    display: flex;
+    margin: 20px 0 40px;                       
+}*/
+/*.tab-links{
+    margin-rignt: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}*/
+
+.tab-links::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+/*.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    colour: #901818;
+    font-size: 14px;
+}*/
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #0808ed; /* Corrected typo in 'colour' to 'color' */
+    font-size: 16px;
+}
+
+/* Specific colors for Data Analyst, Data Science, and Web Development */
+.tab-contents {
+    display: none;
+    color: #0808ed; /* Example: Blue for Data Analyst */
+}
+
+.tab-contents.active-tab {
+    display: block;
+    color: #0808ed; /* Example: Green for Data Science */
+}
+
+.tab-contents ul li.web-development span {
+    color: #0808ed; /* Example: Yellow for Web Development */
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+/*---------------------Services---------------------------*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #d4b5b5;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    color: black;
+    transition: background0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.service-list div a{
+    text-decoration: none;
+    colour: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translatey(-10px);
+}
+
+
+
+/*--------------------------------portfolio------------------
+#portfolio{
+    padding: 10px 0;
+}
+.work-list{
+    display: 10px 0;
+    gride-template-columns: repeat(auto-fit, minmax(50px,1fr));
+    grid-gap: 10px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 30%;
+    border-radius: 10px;
+    display: block;
+}*/
+
+
+
+#portfolio {
+    padding: 10px 0;
+}
+
+.work-list {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: row; /* Align items in a row */
+    gap: 20px; /* Add spacing between the images */
+    margin-top: 50px;
+    justify-content: center;
+    color: black; /* Center the images horizontally */
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    width: 30%; /* Adjust the width of each image container */
+}
+
+.work img {
+    width: 100%; /* Ensure images fully fill their container */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    color: black;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0,.6), #ff004f);
+    border-radius : 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    transition: height o.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-heigh: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn: hover{
+    background: #ff004f;
+}
+
+
+
+/*----------------------------Contact-----------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icon{
+    margin-top: 30px;
+}.social-icon a{
+    text-decoration: none;
+    margin-right: 15px;
+    colour: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+.social-icons a:hover{
+    colour: #d9ccd0;
+    transform: translatey(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%
+}
+form input, from textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #c9b3b3;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #e1cccc;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    colour: #be174c;
+}
+
+/*-------------css for small screens-----------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and(max-width: 600px){  
+    #header{
+        background-image: url(url(imagee.jpg));
+    }  
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .head-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100hv;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+        color: black;
+    }
+    .copyright p{
+        font-size: 14px;
+        color: black;
+    }
+
+
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+.container image1{
+    margin: 50 auto;
+}
+
+
+
+
+
+
+
+
+
+
+<style>
+    .tab-contents {
+        display: none;
+    }
+
+    .active-tab {
+        display: block;
+    }
+
+    .active-link {
+        font-weight: bold;
+        color: blue;
+    }
+</style>
